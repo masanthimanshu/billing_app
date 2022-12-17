@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "872024718636",
+    "project_id": "billing-fd26e",
+    "storage_bucket": "billing-fd26e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872024718636:android:b4c6d3d86a0e286f648089",
+        "android_client_info": {
+          "package_name": "com.example.billing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872024718636-critd3186ghv6g7nvdvcp17f1me282o5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPTbq6XY4VvaQW6uE2BLXMXrw3bgPfJts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872024718636-critd3186ghv6g7nvdvcp17f1me282o5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
