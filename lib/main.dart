@@ -1,15 +1,19 @@
+import 'package:billing/root.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:billing/firebase_options.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:billing/screens/bottom_navbar.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  await Hive.initFlutter();
+  await Hive.openBox("myBox");
 
   runApp(const MyApp());
 }
@@ -42,6 +46,19 @@ class MyApp extends StatelessWidget {
           selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
           unselectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
         ),
+        textButtonTheme: const TextButtonThemeData(
+          style: ButtonStyle(
+            foregroundColor: MaterialStatePropertyAll(
+              Colors.indigo,
+            ),
+            textStyle: MaterialStatePropertyAll(
+              TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
         elevatedButtonTheme: const ElevatedButtonThemeData(
           style: ButtonStyle(
             backgroundColor: MaterialStatePropertyAll(Colors.indigo),
@@ -58,7 +75,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const BottomNavbar(),
+      home: const RootElement(),
     );
   }
 }
