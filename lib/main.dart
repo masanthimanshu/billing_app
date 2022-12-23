@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
     ]);
 
     return MaterialApp(
+      title: "Billing App",
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         textTheme: GoogleFonts.openSansTextTheme(),
