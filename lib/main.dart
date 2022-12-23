@@ -51,6 +51,7 @@ class MyApp extends StatelessWidget {
             foregroundColor: MaterialStatePropertyAll(
               Colors.indigo,
             ),
+            
             textStyle: MaterialStatePropertyAll(
               TextStyle(
                 fontSize: 18,
