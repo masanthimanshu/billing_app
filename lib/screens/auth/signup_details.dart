@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:billing/components/header.dart';
-import 'package:billing/screens/bottom_navbar.dart';
+import 'package:billing_app/components/header.dart';
+import 'package:billing_app/screens/bottom_navbar.dart';
 
 class SignupDetails extends StatefulWidget {
   const SignupDetails({Key? key}) : super(key: key);

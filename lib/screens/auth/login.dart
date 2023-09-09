@@ -1,52 +1,41 @@
-import 'package:flutter/material.dart';
-import 'package:billing/components/header.dart';
+import 'package:billing_app/components/header.dart';
+import 'package:billing_app/screens/auth/signup.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:billing/screens/login_signup/login.dart';
-import 'package:billing/screens/login_signup/signup_details.dart';
+import 'package:flutter/material.dart';
 
-class Signup extends StatefulWidget {
-  const Signup({Key? key}) : super(key: key);
+class Login extends StatefulWidget {
+  const Login({Key? key}) : super(key: key);
 
   @override
-  State<Signup> createState() => _SignupState();
+  State<Login> createState() => _LoginState();
 }
 
-class _SignupState extends State<Signup> {
+class _LoginState extends State<Login> {
   final _formKey = GlobalKey<FormState>();
 
   String _user = "";
   String _pass = "";
-  String _confirmPass = "";
 
-  _handleSignUp() async {
-    if (_pass == _confirmPass) {
-      try {
-        await FirebaseAuth.instance
-            .createUserWithEmailAndPassword(
-              email: _user,
-              password: _pass,
-            )
-            .then((value) => Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => const SignupDetails(),
-                  ),
-                ));
-      } on FirebaseAuthException catch (e) {
-        if (e.code == 'weak-password') {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text("Weak Password")),
-          );
-        } else if (e.code == 'email-already-in-use') {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text("Email Already Exists")),
-          );
-        }
-      }
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Password Does Not Match")),
+  _handleLogin() async {
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: _user,
+        password: _pass,
       );
+    } on FirebaseAuthException catch (e) {
+      if (e.code == "user-not-found") {
+        if (!mounted) return;
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("User Not Found")),
+        );
+      } else if (e.code == "wrong-password") {
+        if (!mounted) return;
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("Wrong Password")),
+        );
+      }
     }
   }
 
@@ -98,25 +87,6 @@ class _SignupState extends State<Signup> {
                     },
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: TextFormField(
-                    obscureText: true,
-                    decoration: const InputDecoration(
-                      icon: Icon(Icons.key),
-                      border: UnderlineInputBorder(),
-                      labelText: "Confirm Password",
-                      hintText: "Enter Your Password",
-                    ),
-                    onChanged: (text) => _confirmPass = text,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return "Please enter your password";
-                      }
-                      return null;
-                    },
-                  ),
-                ),
                 const SizedBox(height: 30),
                 Padding(
                   padding: const EdgeInsets.all(20),
@@ -125,10 +95,10 @@ class _SignupState extends State<Signup> {
                     child: ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          _handleSignUp();
+                          _handleLogin();
                         }
                       },
-                      child: const Text("SIGN UP"),
+                      child: const Text("LOGIN"),
                     ),
                   ),
                 ),
@@ -137,12 +107,12 @@ class _SignupState extends State<Signup> {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const Login(),
+                        builder: (_) => const Signup(),
                       ),
                     );
                   },
                   child: const Text(
-                    "LOGIN",
+                    "SIGN UP",
                   ),
                 ),
               ],

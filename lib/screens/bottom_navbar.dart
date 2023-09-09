@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:billing/screens/home/home.dart';
-import 'package:billing/screens/scan/preview.dart';
-import 'package:billing/screens/profile/profile.dart';
-import 'package:billing/screens/products/products.dart';
+import 'package:billing_app/screens/home/home.dart';
+import 'package:billing_app/screens/scan/preview.dart';
+import 'package:billing_app/screens/profile/profile.dart';
+import 'package:billing_app/screens/products/products.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 class BottomNavbar extends StatefulWidget {

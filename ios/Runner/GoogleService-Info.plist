@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>872024718636-ko5ftn5lq6c06t0d7cl50s0tq233k39h.apps.googleusercontent.com</string>
+	<string>962500058026-9ot04gdm846dcjst066hpco1sho28072.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.872024718636-ko5ftn5lq6c06t0d7cl50s0tq233k39h</string>
+	<string>com.googleusercontent.apps.962500058026-9ot04gdm846dcjst066hpco1sho28072</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDndZ-qEbGyCbY2_Fm_zAIoUJhRQgYGLw4</string>
+	<string>AIzaSyCVeJGLIWsMDSkCBLV5e5EO6RIhLoClKA0</string>
 	<key>GCM_SENDER_ID</key>
-	<string>872024718636</string>
+	<string>962500058026</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.billing</string>
+	<string>com.example.billingApp</string>
 	<key>PROJECT_ID</key>
-	<string>billing-fd26e</string>
+	<string>billing-app-88db0</string>
 	<key>STORAGE_BUCKET</key>
-	<string>billing-fd26e.appspot.com</string>
+	<string>billing-app-88db0.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:872024718636:ios:8151d7bda0d8e0bc648089</string>
+	<string>1:962500058026:ios:0e2a32828966af1653e9d3</string>
 </dict>
 </plist>

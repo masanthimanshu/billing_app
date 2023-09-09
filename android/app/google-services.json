@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "872024718636",
-    "project_id": "billing-fd26e",
-    "storage_bucket": "billing-fd26e.appspot.com"
+    "project_number": "962500058026",
+    "project_id": "billing-app-88db0",
+    "storage_bucket": "billing-app-88db0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:872024718636:android:b4c6d3d86a0e286f648089",
+        "mobilesdk_app_id": "1:962500058026:android:b284442c2ff605e753e9d3",
         "android_client_info": {
-          "package_name": "com.example.billing"
+          "package_name": "com.example.billing_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "872024718636-critd3186ghv6g7nvdvcp17f1me282o5.apps.googleusercontent.com",
+          "client_id": "962500058026-qr3de36k3dvn4de21otfl8o5a682qlm4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDPTbq6XY4VvaQW6uE2BLXMXrw3bgPfJts"
+          "current_key": "AIzaSyBxACjBpehFyTf7gFhjkxHh6lpg3e0HCMg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "872024718636-critd3186ghv6g7nvdvcp17f1me282o5.apps.googleusercontent.com",
+              "client_id": "962500058026-qr3de36k3dvn4de21otfl8o5a682qlm4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

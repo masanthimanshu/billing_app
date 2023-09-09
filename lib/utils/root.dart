@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:billing_app/screens/auth/login.dart';
+import 'package:billing_app/screens/bottom_navbar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:billing/screens/bottom_navbar.dart';
-import 'package:billing/screens/login_signup/login.dart';
+import 'package:flutter/material.dart';
 
 class RootElement extends StatelessWidget {
   const RootElement({Key? key}) : super(key: key);

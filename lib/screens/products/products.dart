@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:billing/screens/products/add_product.dart';
-import 'package:billing/screens/products/product_details.dart';
+import 'package:billing_app/screens/products/add_product.dart';
+import 'package:billing_app/screens/products/product_details.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 class Products extends StatefulWidget {
